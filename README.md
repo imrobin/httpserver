@@ -7,9 +7,9 @@ help: (show the usage of the httpserver)
 
 ./httpserver --help  
 
-first mode: (selects a directory from which to serve files, --num-threads is optional, it can sepecify the max number of clientsthe server can serve simultaneously)
+first mode: (selects a directory from which to serve files, --num-threads is optional, it can sepecify the max number of clientsthe server can serve simultaneously, "directory/" indicates serving file from directory : "directory/" (you can change it to "files/" as I provided some simple documents in "files/") )
 
-./httpserver --files files/ --port 8000 [--num-threads 5]
+./httpserver --files directory/ --port 8000 [--num-threads 5]
 
 seconde mode: (selects an upstream HTTP server to proxy, the argument can have a port number after a colon, e.g. inst.eecs.berkeley.edu:80, if not specified, the default prot is 80, --num-threads is optional, it can sepecify the max number of clientsthe server can serve simultaneously)
 
