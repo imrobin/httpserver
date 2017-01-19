@@ -4,13 +4,16 @@ This project is an httpserver, writen in C. The HTTP server can handles HTTP GET
 
 Usage:
 help: (show the usage of the httpserver)
-      ./httpserver --help  
+
+./httpserver --help  
 
 first mode: (selects a directory from which to serve files, --num-threads is optional, it can sepecify the max number of clientsthe server can serve simultaneously)
-      ./httpserver --files files/ --port 8000 [--num-threads 5]
+
+./httpserver --files files/ --port 8000 [--num-threads 5]
 
 seconde mode: (selects an upstream HTTP server to proxy, the argument can have a port number after a colon, e.g. inst.eecs.berkeley.edu:80, if not specified, the default prot is 80, --num-threads is optional, it can sepecify the max number of clientsthe server can serve simultaneously)
-      ./httpserver --proxy inst.eecs.berkeley.edu:80 --port 8000 [--num-threads 5]
+
+./httpserver --proxy inst.eecs.berkeley.edu:80 --port 8000 [--num-threads 5]
 
 
 when httpserver works in the first mode, if the HTTP request's path corresponds to a file, it will search for the specified file. If the file exits,  respond with a 200 OK and the full content of the file, ortherwise, respond a 404 NOT FOUND.
