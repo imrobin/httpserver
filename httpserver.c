@@ -48,7 +48,9 @@ char * containsFile(char *path){
         res = "no cwd";
         return res;
     }
-    strcat(cwd, "/files");
+    strcat(cwd, "/");
+    strcat(cwd,server_files_directory);
+    //strcat(cwd, "/files");
     strcat(cwd, path);
     struct stat sb;
     if(stat(cwd, &sb)<0){
